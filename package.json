@@ -5,7 +5,7 @@
   "main": "",
   "scripts": {
     "start": "nodemon app.js --exec babel-node --presets es2015",
-    "start-server": "npm run db-migration && npm run db-seed && nodemon hw4/index.js --exec babel-node --presets es2015",
+    "start-server": "npm run db-migration && npm run db-seed && nodemon src/index.js --exec babel-node --presets es2015",
     "db-migration": "node_modules/.bin/sequelize db:migrate",
     "db-seed": "node_modules/.bin/sequelize db:seed:all"
   },
