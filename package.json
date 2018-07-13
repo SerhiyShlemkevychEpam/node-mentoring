@@ -2,14 +2,12 @@
   "name": "",
   "version": "1.0.0",
   "description": "",
-  "main": "",
+  "main": "app.js",
   "scripts": {
     "start": "nodemon app.js --exec babel-node --presets es2015",
     "start-server": "npm run db-migration && npm run db-seed && nodemon hw4/index.js --exec babel-node --presets es2015",
-    "db-migration": "node_modules/.bin/sequelize db:migrate",
-    "db-seed": "node_modules/.bin/sequelize db:seed:all"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
   "license": "ISC",
   "dependencies": {
     "babel-cli": "^6.26.0",
@@ -26,6 +24,8 @@
     "express-jwt": "^5.3.0",
     "globby": "^7.0.0",
     "jsonwebtoken": "^8.1.0",
+    "mongodb": "^2.2.33",
+    "mongoose": "^4.13.4",
     "passport": "^0.4.0",
     "passport-facebook": "^2.1.1",
     "passport-google-oauth": "^1.0.0",

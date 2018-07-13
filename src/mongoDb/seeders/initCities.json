@@ -1,0 +1,29 @@
+[
+  {
+    "name": "Brest",
+    "country": "Belarus",
+    "capital": false,
+    "location": {
+      "lat": 52.097621,
+      "long": 23.734050
+    }
+  },
+  {
+    "name": "Lviv",
+    "country": "Ukraine",
+    "capital": false,
+    "location": {
+      "lat": 31.013233,
+      "long": 133.414050
+    }
+  },
+  {
+    "name": "Poltava",
+    "country": "Ukraine",
+    "capital": false,
+    "location": {
+      "lat": 31.011133,
+      "long": 133.114050
+    }
+  }
+]

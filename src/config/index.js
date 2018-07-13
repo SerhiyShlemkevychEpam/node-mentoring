@@ -5,6 +5,8 @@ const database = process.env.POSTGRES_DB;
 const username = process.env.POSTGRES_USER;
 const password = process.env.POSTGRES_PASSWORD;
 const dialect = 'postgres';
+const mongoHost = process.env.MONGO_HOST;
+const mongoPort = process.env.MONGO_PORT;
 export {
   port,
   dbPort,
@@ -12,5 +14,7 @@ export {
   database,
   username,
   password,
-  dialect
+  dialect,
+  mongoHost,
+  mongoPort
 };
