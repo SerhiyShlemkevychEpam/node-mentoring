@@ -43,26 +43,28 @@ router.post('/authorise', passport.authenticate('local', { session: false }), (r
 });
 
 router.post('/auth', (req, res) => {
-  const user = findUserByUsername(req.body.username);
-  if (!user) {
-    res.status(403).send({ status: 403, message: 'Incorrect username.' });
-  } else if (!verifyPassword(user, req.body.pwd)) {
-    res.status(403).send({ status: 403, message: 'Incorrect password.' });
-  } else {
-    const token = jwt.sign({ id: user.id }, 'my secret');
-    res.status(200).json(
-      {
-        code: '200',
-        message: 'OK',
-        data: {
-          user: {
-            email: user.email,
-            username: user.username
-          }
-        },
-        token
-      });
-  }
+  findUserByUsername(req.body.username)
+    .then((user) => {
+      if (!user) {
+        res.status(403).send({ status: 403, message: 'Incorrect username.' });
+      } else if (!verifyPassword(user, req.body.pwd)) {
+        res.status(403).send({ status: 403, message: 'Incorrect password.' });
+      } else {
+        const token = jwt.sign({ id: user.id }, 'my secret');
+        res.status(200).json(
+          {
+            code: '200',
+            message: 'OK',
+            data: {
+              user: {
+                email: user.email,
+                username: user.username
+              }
+            },
+            token
+          });
+      }
+    });
 });
 
 export default router;

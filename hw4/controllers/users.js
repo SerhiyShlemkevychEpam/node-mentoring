@@ -4,7 +4,9 @@ import { getAllUsers } from '../models/users';
 const router = express.Router();
 
 router.get('/', (req, res) => {
-  res.send(getAllUsers());
+  getAllUsers()
+    .then(users => res.send(users))
+    .catch(err => res.send(err.messsage));
 });
 
 export default router;

@@ -11,7 +11,7 @@ const mwBuilder = options => [
   cookieParser,
   queryParser,
   passport,
-  jwt,
+  // jwt,
   logger
 ].map(factory => factory(options));
 

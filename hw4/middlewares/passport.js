@@ -28,8 +28,8 @@ export default ({ app }) => {
 
   passport.use(new passportFB.Strategy(
     {
-      clientID: '',
-      clientSecret: '',
+      clientID: '320082328401816',
+      clientSecret: '73926d57bfd3243cbcdf13e6dd7980fe',
       callbackURL: 'http://localhost:8080/authorise/facebook/callback'
     },
     (accessToken, refreshToken, profile, done) => done(null, profile)
@@ -37,8 +37,8 @@ export default ({ app }) => {
 
   passport.use(new passportGoogle.OAuth2Strategy(
     {
-      clientID: '',
-      clientSecret: '',
+      clientID: '585069440111-hpcgp59nmpe420tq9eu85g5eagd4053u.apps.googleusercontent.com',
+      clientSecret: 'UbaxSL77FYtfGaQasRX39mK9',
       callbackURL: 'http://localhost:8080/authorise/google/callback'
     },
     (accessToken, refreshToken, profile, done) => done(null, profile)
